@@ -8,14 +8,129 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <!-- The above 4 meta tags *must* come first in the head; any other head content must come *after* these tags -->
   <!-- Title -->
-  <title>Famie - Farm Services &amp; Organic Food Store Template | Home</title>
+  <title>Reap Agro - Farm Services &amp;  | Home</title>
   <!-- Favicon -->
   <link rel="icon" href="img/core-img/favicon.ico">
   <!-- Core Stylesheet -->
   <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="text/javascript" ></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" type="text/javascript"></script>
+  <script src="slick.js" type="text/javascript" charset="utf-8"></script>
+
+
+
+  <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css' rel='stylesheet'>
+  <link href='https://use.fontawesome.com/releases/v5.8.1/css/all.css' rel='stylesheet'>
+  <style> .brands {
+width: 100%;
+padding-bottom: 50px;
+margin-top:-20px;
+
+}
+
+.brands_slider_container {
+height: 130px;
+border: solid 1px #e8e8e8;
+box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.1);
+padding-left: 97px;
+padding-right: 97px
+}
+
+.brands_slider {
+height: 100%;
+margin-top: 50px
+}
+
+.brands_item {
+height: 100%
+}
+
+.brands_item img {
+max-width: 100%
+}
+
+.brands_nav {
+position: absolute;
+top: 50%;
+-webkit-transform: translateY(-50%);
+-moz-transform: translateY(-50%);
+-ms-transform: translateY(-50%);
+-o-transform: translateY(-50%);
+transform: translateY(-50%);
+padding: 5px;
+cursor: pointer
+}
+
+.brands_nav i {
+color: #e5e5e5;
+-webkit-transition: all 200ms ease;
+-moz-transition: all 200ms ease;
+-ms-transition: all 200ms ease;
+-o-transition: all 200ms ease;
+transition: all 200ms ease
+}
+
+.brands_nav:hover i {
+color: #676767
+}
+
+.brands_prev {
+left: 40px
+}
+
+.brands_next {
+right: 40px
+}</style>
+  <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+  <script type='text/javascript' src='https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js'></script>
+  <script type='text/javascript'>$(document).ready(function(){
+
+if($('.brands_slider').length)
+{
+var brandsSlider = $('.brands_slider');
+
+brandsSlider.owlCarousel(
+{
+loop:true,
+autoplay:true,
+autoplayTimeout:5000,
+nav:false,
+dots:false,
+autoWidth:true,
+items:8,
+margin:42
+});
+
+if($('.brands_prev').length)
+{
+var prev = $('.brands_prev');
+prev.on('click', function()
+{
+brandsSlider.trigger('prev.owl.carousel');
+});
+}
+
+if($('.brands_next').length)
+{
+var next = $('.brands_next');
+next.on('click', function()
+{
+brandsSlider.trigger('next.owl.carousel');
+});
+}
+}
+
+
+});</script>
+
+
+
 </head>
 
 <body>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.2.1/owl.carousel.js"></script>
   <!-- Preloader -->
   <div class="preloader d-flex align-items-center justify-content-center">
     <div class="spinner"></div>
@@ -55,30 +170,10 @@
               <!-- Navbar Start -->
               <div class="classynav">
                 <ul>
-                  <li class="active"><a href="index.html">Home</a></li>
+                  <!-- <li><a href="index.html">Home</a></li> -->
                   <li><a href="about">About</a></li>
-                  <!-- <li><a href="#">Pages</a>
-                    <ul class="dropdown">
-                      <li><a href="index.html">Home</a></li>
-                      <li><a href="about.html">About Us</a></li>
-                      <li><a href="farming-practice.html">Farming Practice</a></li>
-                      <li><a href="shop.html">Shop</a>
-                        <ul class="dropdown">
-                          <li><a href="our-product.html">Our Products</a></li>
-                          <li><a href="shop.html">Shop</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="news.html">News</a>
-                        <ul class="dropdown">
-                          <li><a href="news.html">News</a></li>
-                          <li><a href="news-details.html">News Details</a></li>
-                        </ul>
-                      </li>
-                      <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                  </li> -->
-                  <!-- <li><a href="our-product.html">Services</a></li>
-                  <li><a href="farming-practice.html">Our Clients</a></li> -->
+                
+
                   <li><a href="#news">News</a></li>
                   <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -309,7 +404,7 @@
   <!-- ##### Services Area End ##### -->
 
   <!-- ##### Our Clients Area Start ##### -->
-  <section class="our-products-area section-padding-100">
+  <section style="padding-top:30px;" class="our-products-area">
     <div class="container">
       <div class="row">
         <div class="col-12">
@@ -323,86 +418,73 @@
       </div>
 
       <div class="row">
-
-        <!-- Single Product Area -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="single-product-area mb-50 wow fadeInUp" data-wow-delay="100ms">
-            <!-- Product Thumbnail -->
-            <div class="product-thumbnail">
-              <img src="img/bg-img/p1.jpg" alt="">
-              <!-- Product Tags -->
-              <span class="product-tags">Hot</span>
-              <!-- Product Meta Data -->
-              <div class="product-meta-data">
-                <a href="#" data-toggle="tooltip" data-placement="top" title="Favourite"><i class="icon_heart_alt"></i></a>
-                <a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon_cart_alt"></i></a>
-                <a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="arrow_left-right_alt"></i></a>
+        <!--OUR CLIENTS SLIDER-->
+        <div class="brands">
+          <div class="container">
+              <div class="row">
+                  <div class="col">
+                      <div class="brands_slider_container">
+                          <div class="owl-carousel owl-theme brands_slider">
+                              <div class="owl-item">
+                                  <div class="brands_item d-flex flex-column justify-content-center">
+                                    <img style= "height: 70px; width: 105px;"src="images/image1.png" alt=""></div>
+                              </div>
+                              <div class="owl-item">
+                                  <div class="brands_item d-flex flex-column justify-content-center">
+                                    <img style= "height: 70px; width: 105px;"src="images/image2.png" alt=""></div>
+                              </div>
+                              <div class="owl-item">
+                                  <div class="brands_item d-flex flex-column justify-content-center">
+                                    <img style= "height: 70px; width: 105px;" src="images/image4.png" alt=""></div>
+                              </div>
+                              <div class="owl-item">
+                                  <div class="brands_item d-flex flex-column justify-content-center">
+                                    <img style= "height: 40px; width: 105px;" src="images/image5.png" alt=""></div>
+                              </div>
+                              <div class="owl-item">
+                                  <div class="brands_item d-flex flex-column justify-content-center">
+                                    <img style= "height: 70px; width: 105px;" src="images/image3.png" alt=""></div>
+                              </div>
+                              <div class="owl-item">
+                                  <div class="brands_item d-flex flex-column justify-content-center">
+                                    <img style= "height: 70px; width: 105px;" src="images/image6.png" alt=""></div>
+                              </div>
+                              <div class="owl-item">
+                                  <div class="brands_item d-flex flex-column justify-content-center">
+                                    <img style= "height: 70px; width: 105px;" src="images/image7.png" alt=""></div>
+                              </div>
+                              <div class="owl-item">
+                                  <div class="brands_item d-flex flex-column justify-content-center">
+                                    <img style= "height: 70px; width: 105px;" src="images/image8.png" alt=""></div>
+                              </div>
+                              <div class="owl-item">
+                                <div class="brands_item d-flex flex-column justify-content-center">
+                                  <img style= "height: 70px; width: 105px;" src="images/image9.png" alt=""></div>
+                            </div>
+                            <div class="owl-item">
+                              <div class="brands_item d-flex flex-column justify-content-center">
+                                <img style= "height: 70px; width: 105px;" src="images/image10.png" alt=""></div>
+                          </div>
+                          <div class="owl-item">
+                            <div class="brands_item d-flex flex-column justify-content-center">
+                              <img style= "height: 70px; width: 105px;" src="images/image11.png" alt=""></div>
+                        </div>
+                        <div class="owl-item">
+                          <div class="brands_item d-flex flex-column justify-content-center">
+                            <img style= "height: 50px; width: 105px;" src="images/image12.png" alt=""></div>
+                      </div>
+                      <div class="owl-item">
+                        <div class="brands_item d-flex flex-column justify-content-center">
+                          <img style= "height: 70px; width: 105px;" src="images/image13.png" alt=""></div>
+                    </div>
+                          </div> <!-- Brands Slider Navigation -->
+                          <div class="brands_nav brands_prev"><i class="fas fa-chevron-left"></i></div>
+                          <div class="brands_nav brands_next"><i class="fas fa-chevron-right"></i></div>
+                      </div>
+                  </div>
               </div>
-            </div>
-            <!-- Product Description -->
-            <!-- <div class="product-desc text-center pt-4">
-              <a href="#" class="product-title">Strawberry</a>
-              <h6 class="price">$17.99</h6>
-            </div> -->
           </div>
-        </div>
-
-        <!-- Single Product Area -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="single-product-area mb-50 wow fadeInUp" data-wow-delay="300ms">
-            <!-- Product Thumbnail -->
-            <div class="product-thumbnail">
-              <img src="img/bg-img/p2.jpg" alt="">
-              <!-- Product Meta Data -->
-              <div class="product-meta-data">
-                <a href="#" data-toggle="tooltip" data-placement="top" title="Favourite"><i class="icon_heart_alt"></i></a>
-                <a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon_cart_alt"></i></a>
-                <a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="arrow_left-right_alt"></i></a>
-              </div>
-            </div>
-            <!-- Product Description -->
-           
-          </div>
-        </div>
-
-        <!-- Single Product Area -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="single-product-area mb-50 wow fadeInUp" data-wow-delay="500ms">
-            <!-- Product Thumbnail -->
-            <div class="product-thumbnail">
-              <img src="img/bg-img/p3.jpg" alt="">
-              <!-- Product Meta Data -->
-              <div class="product-meta-data">
-                <a href="#" data-toggle="tooltip" data-placement="top" title="Favourite"><i class="icon_heart_alt"></i></a>
-                <a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon_cart_alt"></i></a>
-                <a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="arrow_left-right_alt"></i></a>
-              </div>
-            </div>
-            <!-- Product Description -->
-            
-          </div>
-        </div>
-
-        <!-- Single Product Area -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="single-product-area mb-50 wow fadeInUp" data-wow-delay="700ms">
-            <!-- Product Thumbnail -->
-            <div class="product-thumbnail">
-              <img src="img/bg-img/p4.jpg" alt="">
-              <!-- Product Tags -->
-              <span class="product-tags bg-danger">Sale</span>
-              <!-- Product Meta Data -->
-              <div class="product-meta-data">
-                <a href="#" data-toggle="tooltip" data-placement="top" title="Favourite"><i class="icon_heart_alt"></i></a>
-                <a href="#" data-toggle="tooltip" data-placement="top" title="Add To Cart"><i class="icon_cart_alt"></i></a>
-                <a href="#" data-toggle="tooltip" data-placement="top" title="Compare"><i class="arrow_left-right_alt"></i></a>
-              </div>
-            </div>
-            <!-- Product Description -->
-     
-          </div>
-        </div>
-
+      </div>
       </div>
 
       <div class="row">
@@ -475,9 +557,11 @@
           <div class="single-blog-area style-2 wow fadeInUp" data-wow-delay="700ms">
             <!-- Post Content -->
             <div class="post-content">
+              
               <div style="text-align: center;">
-                <h1 style="font-size:50px; color:#77b122;">1500</h1>
-                <h5 style="color: grey;">Farmers' Crops Purchased</h5>
+                <img style="float: left;" src="img/core-img/windmill.png" alt="">
+               <h1 style="font-size:50px; color:#77b122; ">1500</h1>
+                <h5 style="color: grey; margin-left: 80px;">Farmers' Crops Purchased</h5>
                 </div>
             </div>
           </div>
@@ -490,12 +574,11 @@
           <!-- Post Content -->
           <div class="post-content">
             <div style="text-align: center;">
+              <img style="float: left;" src="img/core-img/sunrise.png" alt="">
             <h1 style="font-size:50px; color:#77b122"> 2000 </h1>
-            <h5 style="color: grey;">Loans Disbursed to Farmers</h5>
+            <h5 style="color: grey; margin-left: 80px;">Loans Disbursed to Farmers</h5>
             </div>
-            <!-- <h6>Post on <a href="#">18 Aug 2018</a> / <a href="#">Peter Crough</a></h6>
-            <a href="#" class="post-title">Rising cattle supplies see beef export lifted</a>
-            <p>Maecenas facilisis quam orcit, velo porttitor arcu egestas eu. Maecenas donald imperdiet nibh, quis. Etiam non scelerisque exited sagittis...</p> -->
+           
           </div>
         </div>
  <!-- Single Blog Area -->
@@ -503,8 +586,9 @@
   <!-- Post Content -->
   <div class="post-content">
     <div style="text-align: center;">
+      <img style="float: left;" src="img/core-img/cereals.png" alt="">
       <h1 style="font-size:50px; color:#77b122"> 5000 </h1>
-      <h5 style="color: grey;">Farmers Advised</h5>
+      <h5 style="color: grey; margin-left: 80px;">Farmers Advised</h5>
       </div>
   </div>
 </div>
@@ -622,7 +706,8 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
 
   <!-- ##### All Javascript Files ##### -->
   <!-- jquery 2.2.4  -->
-  <script src="js/jquery.min.js"></script>
+
+    <script src="js/jquery.min.js"></script>
   <!-- Popper js -->
   <script src="js/popper.min.js"></script>
   <!-- Bootstrap js -->
@@ -645,6 +730,9 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
   <script src="js/jarallax-video.min.js"></script>
   <!-- Active js -->
   <script src="js/active.js"></script>
+  
+
+ 
 </body>
 
 </html>
